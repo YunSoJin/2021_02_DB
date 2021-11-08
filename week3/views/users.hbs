@@ -1,0 +1,12 @@
+<h1>{{ title }}</h1>
+
+<ul>
+  {{#each users}}
+    <li>
+      <a>
+        <!-- 데이터베이스 테이블의 필드명과 동일하게 작성 -->
+        {{ ID }} / {{ Name }} /{{Department}}/{{Grade}}/{{AdmissionDate}}/{{Email}}
+      </a>
+    </li>
+  {{/each}}
+</ul>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div>
+      <h1>Random Number Game</h1>
+      <h3 id="subtitle"></h3>
+    </div>
+    <div>
+      <datalist id="number">
+        <option>10</option>
+        <option>50</option>
+        <option>100</option>
+        <option>150</option>
+        <option>200</option>
+      </datalist>
+      <input
+        list="number"
+        id="js-range"
+        type="range"
+        min="5"
+        max="200"
+        value="5"
+        step="5"    
+      />
+    </div>
+    <div>
+      <form id="js-input">
+        <span>Guess the number : </span>
+        <input type="number" max="200" min="5" id="js-value" style="width: 24px;" value="" />
+        <button id="playBtn">Play!</button>
+      </form>
+      <span id="message"> </span>
+      <h2 id="result"></h2>
+    </div>
+
+    <script src="ex2.js"></script>
+  </body>
+</html>

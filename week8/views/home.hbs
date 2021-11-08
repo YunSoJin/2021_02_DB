@@ -1,0 +1,85 @@
+<!--데이터 삽입을 위한 form 구현 -->
+
+<!--제목 / employee 데이터 삽입 부분 form -->
+<h1>Employee 데이터 삽입</h1>
+<!--'/'의 주소가 있을 때 출력-->
+<form name="employee" method="post" action='/'> 
+    <!-- label의 for와 input의 id는 같아야 한다. label 선언 뒤 있는 이름은 출력 페이지에서 출력되는 값이다. 
+    Fname이라고 선언하였다면, home에서 Fname으로 출력된다.
+    text 타입으로 입력받는다. placeholder 설정은 값을 입력하기 전 기본으로 나와있는 스티링을 어떻게 할 것인가이다.
+    placeholder를 Fname으로 해두었다면, fname을 창에 입력하기 전까지는 Fname으로 출력되어 있는다.-->
+    <div>
+        <label for="fname">Fname</label>
+        <input id="fname" name="fname" type="text" required placeholder="Fname"> 
+    </div> 
+    <div>
+        <label for="minit">Minit</label>
+        <input id="minit" name="minit" type="text" placeholder="Minit"> 
+    </div> 
+    <div>
+        <label for="lname">Lname</label>
+        <input id="lname" name="lname" type="text" required placeholder="Lname"> 
+    </div> 
+    <div>
+        <label for="ssn">Ssn</label>
+        <input id="ssn" name="ssn" type="text" placeholder="Ssn"> 
+    </div> 
+    <div>
+        <label for="bdate">Bdate</label>
+        <input id="bdate" name="bdate" type="text" placeholder="Bdate"> 
+    </div> 
+    <div>
+        <label for="address">Address</label>
+        <input id="address" name="address" type="text" placeholder="Address"> 
+    </div> 
+    <div>
+        <label for="esx">Sex</label>
+        <input id="sex" name="sex" type="text" placeholder="Sex"> 
+    </div> 
+    <div>
+        <label for="salary">salary</label>
+        <input id="salary" name="salary" type="text" placeholder="Salary"> 
+    </div> 
+    <div>
+        <label for="super_ssn">Super_SSn</label>
+        <input id="super_ssn" name="super_ssn" type="text" placeholder="Super_ssn"> 
+    </div> 
+    <div>
+        <label for="dno">Dno</label>
+        <input id="dno" name="dno" type="text" placeholder="Dno"> 
+    </div> 
+    <div>
+        <!--삽입 버튼을 누르면 값이 submit 된다.-->
+        <input type="submit" value="삽입"> 
+    </div> 
+</form>
+
+
+<br><br>
+
+<!--제목 / department 데이터 삽입 부분 form -->
+<h1>Department 데이터 삽입</h1> 
+<!--'/'의 주소가 있을 때 출력-->
+<form id="department" method="post" action="/"> 
+    <div>
+        <label for="dname">Dname</label>
+        <input id="dname" name="dname" type="text" required placeholder="Dname"> 
+    </div> 
+    <div>
+        <label for="dnumber">Dnumber</label>
+        <input id="dnumber" name='dnumber' type="text" placeholder="Dnumber"> 
+    </div> 
+    <div>
+        <label for="mgr_ssn">Mgr_ssn</label>
+        <input id="mgr_ssn" name='mgr_ssn' type="text" required placeholder="Mgr_ssn">
+    </div> 
+    <div>
+        <label for="mgr_start_date">Mgr_start_date</label>
+        <input id="mgr_start_date" name='mgr_start_date' type="text" required placeholder="Mgr_start_date">
+    </div> 
+    <div>    
+        <input type="submit" value="삽입">
+    </div> 
+</form>
+
+

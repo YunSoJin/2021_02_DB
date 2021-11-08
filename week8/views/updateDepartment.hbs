@@ -1,0 +1,25 @@
+<!--department 수정을 위한 테이블 form 구현 -->
+<h1>{{ title }}</h1>
+<table> 
+    <tr>
+        <td>Dname</td> 
+        <td>Dnumber</td> 
+        <td>Mgr_ssn</td>
+        <td>Mgr_start_date</td>
+    </tr>
+     <!--dept_res는 update.js에서 department를 update하기 위한 router.get함수에서 
+    만든 객체와 이름이 동일해야 한다.--> 
+    {{#each dept_res}} 
+        <form method="post"> 
+            <tr>
+                 <!-- input tag를 사용하여 입력 가능한 형태로 변경함 --> 
+                <td><input type="text" name="dname" placeholder={{Dname}}></td> 
+                <td>{{Dnumber}}</td> 
+                <td>{{Mgr_ssn}}</td> 
+                <td>{{Mgr_start_date}}</td> 
+                 <!-- formation 속성을 활용하여 입력한 값을 줌겨줌 -->
+                <td><input type="submit" value="수정" formaction="/update/department"></td> 
+            </tr> 
+        </form> 
+    {{/each}} 
+</table>

@@ -1,0 +1,36 @@
+<!--전체 데이터 조회를 위한 테이블 form 구현 -->
+<!--department 데이터 조회를 위한 테이블 form 구현-->
+<!-- title 이름은 select.js에서 설정한 그대로-->
+<h1>{{ title }}</h1>
+<table> 
+    <tr>
+        <td>Dname</td> 
+        <td>Dnumber</td> 
+    </tr> 
+    <!--select.js에서 넘겨준 데이터가 있을 때마다 반복 -->
+    {{#each department}} 
+    <tr>
+        <td>{{Dname}}</td> 
+        <td>{{Dnumber}}</td> 
+    </tr>
+    {{/each}} 
+</table>
+
+<!--course 데이터 조회를 위한 테이블 form 구현-->
+<h1>{{ title2 }}</h1>
+<table> 
+    <tr>
+        <td>Cname</td> 
+        <td>Cnumber</td> 
+        <td>Dnum</td> 
+    </tr> 
+    <!--select.js에서 넘겨준 데이터가 있을 때마다 반복 -->
+    {{#each course}} 
+    <tr>
+        <td>{{Cname}}</td> 
+        <td>{{Cnumber}}</td> 
+        <td>{{Dnum}}</td> 
+    </tr>
+    {{/each}} 
+</table>
+

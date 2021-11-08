@@ -1,0 +1,38 @@
+<!--employee 수정을 위한 테이블 form 구현 -->
+<h1>{{ title }}</h1>
+<table> 
+    <tr>
+        <td>Fname</td> 
+        <td>Minit</td> 
+        <td>Lname</td> 
+        <td>Ssn</td> 
+        <td>Bdate</td> 
+        <td>Address</td> 
+        <td>Sex</td> 
+        <td>Salary</td> 
+        <td>Super_ssn</td>
+        <td>Dno</td> 
+    </tr>
+    <!--emp_res는 update.js에서 employee를 update하기 위한 router.get함수에서 
+    만든 객체와 이름이 동일해야 한다.-->
+    {{#each emp_res}}
+        <!--'/update/employee' 페이지에 왔을 때 실행-->
+        <form method="post" action='/update/employee'> 
+            <tr>
+                <td>{{Fname}}</td> 
+                <td>{{Minit}}</td> 
+                <td>{{Lname}}</td> 
+                <td>{{Ssn}}</td> 
+                <td>{{Bdate}}</td> 
+                <td>{{Address}}</td> 
+                <td>{{Sex}}</td>
+                <!-- input tag를 사용하여 입력 가능한 형태로 변경한 -->   
+                <td><input type="text" name="salary" placeholder={{Salary}}></td>
+                <td>{{Super_ssn}}</td> 
+                <td>{{Dno}}</td>
+                <!--'수정' 버튼을 누르면 값이 제출된다.-->
+                <td><input type="submit" value="수정" formaction="/update/employee"></td> 
+            </tr> 
+         </form>
+    {{/each}} 
+</table>

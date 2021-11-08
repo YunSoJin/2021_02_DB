@@ -1,0 +1,57 @@
+<!--department에 관한 테이블-->
+<h1>{{ title }}</h1>
+<table>
+  <tr>
+    <td>Dname</td>
+    <td>Dnumber</td>
+  </tr>
+  {{#each department}}
+    <form method="post">
+      <tr>
+        <td>{{Dname}}</td>
+        <td>{{Dnumber}}</td>
+        <td style="border: none; margin-left: 10px;">
+          <!--버튼에 관한 부분. 웹페이지에 뜨는 이름은 삭제로 하고, 버튼을 누르면 Dnumber가 반환된다.-->
+          <button 
+            style="margin-left: 10px;"
+            type="submit" 
+            name="delBtn"
+            value={{Dnumber}} 
+            formaction="/delete">
+          삭제
+          </button>
+        </td>
+      </tr>    
+    </form>
+  {{/each}}
+</table>
+
+<!--course에 관한 테이블-->
+<h1>{{ title2 }}</h1>
+<table>
+  <tr>
+    <td>Cname</td>
+    <td>Cnumber</td>
+    <td>Dnum</td>
+  </tr>
+  {{#each course}}
+    <form method="post">
+      <tr>
+        <td>{{Cname}}</td>
+        <td>{{Cnumber}}</td>
+        <td>{{Dnum}}</td>
+        <td style="border: none; margin-left: 10px;">
+          <!--버튼에 관한 부분. 웹페이지에 뜨는 이름은 삭제로 하고, 버튼을 누르면 Cnumber가 반환된다.-->
+          <button 
+            style="margin-left: 10px;"
+            type="submit" 
+            name="delBtn"
+            value={{Cnumber}} 
+            formaction="/delete">
+          삭제
+          </button>
+        </td>
+      </tr>    
+    </form>
+  {{/each}}
+</table>
