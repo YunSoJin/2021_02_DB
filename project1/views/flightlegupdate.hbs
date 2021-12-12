@@ -1,0 +1,58 @@
+<h1>{{ title1 }}</h1>
+<table> 
+    <tr>
+        <td>Airport_code</td> 
+        <td>City</td> 
+        <td>Name</td> 
+    </tr> 
+    <!--select.js에서 넘겨준 데이터가 있을 때마다 반복 -->
+    {{#each airport}} 
+    <tr>
+        <td>{{Airport_code}}</td> 
+        <td>{{City}}</td> 
+        <td>{{Name}}</td> 
+    </tr>
+    {{/each}} 
+</table>
+
+<h1>{{ title2 }}</h1>
+<table> 
+    <tr>
+        <td>Number</td> 
+        <td>Airline</td> 
+    </tr> 
+    <!--select.js에서 넘겨준 데이터가 있을 때마다 반복 -->
+    {{#each flight}} 
+    <tr>
+        <td>{{Number}}</td> 
+        <td>{{Airline}}</td> 
+    </tr>
+    {{/each}} 
+</table>
+
+
+<h1>{{ title }}</h1>
+<table> 
+    <tr>
+        <td>Leg_no</td> 
+        <td>FLIGHT_Number</td> 
+        <td>Departure_Airport_code</td>
+        <td>Arrival_Airport_code</td>
+        <td>Departure_time</td>
+        <td>Arrival_time</td>
+    </tr> 
+    {{#each flightleg}} 
+        <form method="post"> 
+            <tr>
+                <td><input id="Leg_no" name="Leg_no" type="text" placeholder={{Leg_no}}></td> 
+                <td><input id="FLIGHT_Number" name="FLIGHT_Number" type="text" placeholder={{FLIGHT_Number}}></td> 
+                <td><input id="Departure_Airport_code" name="Departure_Airport_code" type="text" placeholder={{Departure_Airport_code}}></td> 
+                <td><input id="Arrival_Airport_code" name="Arrival_Airport_code" type="text" placeholder={{Arrival_Airport_code}}></td> 
+                <td><input id="Departure_time" name="Departure_time" type="text" placeholder={{Departure_time}}></td> 
+                <td><input id="Arrival_time" name="Arrival_time" type="text" placeholder={{Arrival_time}}></td> 
+                <td><input type="submit" value="수정" formaction="/admin/flightleg/update"></td>
+            </tr> 
+        </form>
+    {{/each}} 
+</table>
+

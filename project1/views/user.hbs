@@ -1,0 +1,34 @@
+<h1>예약 조회</h1> 
+<!--'/'의 주소가 있을 때 출력-->
+<form id="user" method="post" > 
+    <div>
+        <label for="User_id">User_id</label>
+        <input id="User_id" name="User_id" type="text" required placeholder="User_id"> 
+    </div>
+    <div>    
+        <input type="submit" value="검색">
+    </div> 
+</form>
+
+<h1>{{ title }}</h1>
+<table> 
+    <tr>
+        <td>Date</td> 
+        <td>Departure_Airport</td> 
+        <td>Arrival_airport</td> 
+        <td>Dep_time</td> 
+        <td>Arr_time</td> 
+        <td>Seat</td> 
+    </tr> 
+    <!--select.js에서 넘겨준 데이터가 있을 때마다 반복 -->
+    {{#each user}} 
+    <tr>
+        <td>{{Date}}</td> 
+        <td>{{Departure_Airport}}</td> 
+        <td>{{Arrival_airport}}</td> 
+        <td>{{Dep_time}}</td> 
+        <td>{{Arr_time}}</td> 
+        <td>{{Seat}}</td>
+    </tr>
+    {{/each}} 
+</table>

@@ -1,0 +1,20 @@
+<h1>{{ title }}</h1>
+<table> 
+    <tr>
+        <td>Airport_code</td> 
+        <td>City</td> 
+        <td>Name</td> 
+    </tr> 
+    <!--select.js에서 넘겨준 데이터가 있을 때마다 반복 -->
+    {{#each airport}} 
+        <form method="post"> 
+            <tr>
+                <td><input id="Airport_code" name="Airport_code" type="text" placeholder={{Airport_code}}></td> 
+                <td><input id="City" name='City' type="text" placeholder={{City}}></td>
+                <td><input id="Name" name='Name' type="text" placeholder={{Name}}></td>
+                <td><input type="submit" value="수정" formaction="/admin/airport/update"></td>
+            </tr> 
+        </form> 
+    {{/each}} 
+</table>
+

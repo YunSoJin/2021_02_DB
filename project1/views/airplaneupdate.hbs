@@ -1,0 +1,18 @@
+<h1>{{ title }}</h1>
+<table> 
+    <tr>
+        <td>Airplane_id</td> 
+        <td>Airplane_type</td> 
+    </tr> 
+    <!--select.js에서 넘겨준 데이터가 있을 때마다 반복 -->
+    {{#each airplane}} 
+        <form method="post"> 
+            <tr>
+                <td><input id="Airplane_id" name="Airplane_id" type="text" placeholder={{Airplane_id}}></td> 
+                <td><input id="Airplane_type" name="Airplane_type" type="text" placeholder={{Airplane_type}}></td> 
+                <td><input type="submit" value="수정" formaction="/admin/airplane/update"></td>
+            </tr> 
+        </form> 
+    {{/each}} 
+</table>
+

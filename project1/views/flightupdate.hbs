@@ -1,0 +1,17 @@
+<h1>{{ title }}</h1>
+<table> 
+    <tr>
+        <td>Number</td> 
+        <td>Airline</td> 
+    </tr> 
+    <!--select.js에서 넘겨준 데이터가 있을 때마다 반복 -->
+    {{#each flight}} 
+        <form method="post"> 
+            <tr>
+                <td><input id="Number" name="Number" type="text" placeholder={{Number}}></td> 
+                <td><input id="Airline" name="Airline" type="text" placeholder={{Airline}}></td> 
+                <td><input type="submit" value="수정" formaction="/admin/flight/update"></td>
+            </tr> 
+        </form> 
+    {{/each}} 
+</table>

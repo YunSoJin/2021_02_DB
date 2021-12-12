@@ -1,0 +1,38 @@
+<h1>{{ title }}</h1>
+<table> 
+    <tr>
+        <td>Date</td>
+        <td>Airplane_id</td>
+        <td>Leg_number</td> 
+        <td>FLIGHT_Number</td> 
+        <td>Departure_Airport_code</td>
+        <td>Arrival_Airport_code</td>
+        <td>Dep_time</td>
+        <td>Arr_time</td>
+    </tr> 
+    {{#each leginst}} 
+     <form method="post">
+      <tr>
+         <td>{{Date}}</td>
+        <td>{{Airplane_id}}</td>
+        <td>{{Leg_number}}</td>
+        <td>{{FLIGHT_Number}}</td> 
+        <td>{{Departure_Airport_code}}</td>
+        <td>{{Arrival_Airport_code}}</td>
+        <td>{{Dep_time}}</td>
+        <td>{{Arr_time}}</td>
+        <td style="border: none; margin-left: 10px;">
+          <!--버튼에 관한 부분. 웹페이지에 뜨는 이름은 삭제로 하고, 버튼을 누르면 Dnumber가 반환된다.-->
+          <button 
+            style="margin-left: 10px;"
+            type="submit" 
+            name="delBtn"
+            value= {{Leg_number}}
+            formaction="/admin/leginst/delete">
+          삭제
+          </button>
+        </td>
+      </tr>    
+    </form>
+    {{/each}} 
+</table>

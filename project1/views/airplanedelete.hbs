@@ -1,0 +1,27 @@
+<h1>{{ title }}</h1>
+<table> 
+    <tr>
+        <td>Airplane_id</td> 
+        <td>Airplane_type</td> 
+    </tr> 
+    <!--select.js에서 넘겨준 데이터가 있을 때마다 반복 -->
+    {{#each airplane}} 
+    <form method="post">
+      <tr>
+        <td>{{Airplane_id}}</td> 
+        <td>{{Airplane_type}}</td> 
+        <td style="border: none; margin-left: 10px;">
+          <!--버튼에 관한 부분. 웹페이지에 뜨는 이름은 삭제로 하고, 버튼을 누르면 Dnumber가 반환된다.-->
+          <button 
+            style="margin-left: 10px;"
+            type="submit" 
+            name="delBtn"
+            value={{Airplane_id}} 
+            formaction="/admin/airplane/delete">
+          삭제
+          </button>
+        </td>
+      </tr>    
+    </form>
+    {{/each}} 
+</table>

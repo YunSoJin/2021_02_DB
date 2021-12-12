@@ -1,0 +1,77 @@
+<h1>{{ title1 }}</h1>
+<table> 
+    <tr>
+        <td>Leg_no</td> 
+        <td>FLIGHT_Number</td> 
+        <td>Departure_Airport_code</td>
+        <td>Arrival_Airport_code</td>
+        <td>Departure_time</td>
+        <td>Arrival_time</td>
+    </tr> 
+    {{#each flightleg}} 
+    <tr>
+        <td>{{Leg_no}}</td> 
+        <td>{{FLIGHT_Number}}</td> 
+        <td>{{Departure_Airport_code}}</td>
+        <td>{{Arrival_Airport_code}}</td>
+        <td>{{Departure_time}}</td>
+        <td>{{Arrival_time}}</td> 
+    </tr>
+    {{/each}} 
+</table>
+
+<h1>{{ title2 }}</h1>
+<table> 
+    <tr>
+        <td>Airplane_id</td> 
+        <td>Airplane_type</td> 
+    </tr> 
+    <!--select.js에서 넘겨준 데이터가 있을 때마다 반복 -->
+    {{#each airplane}} 
+    <tr>
+        <td>{{Airplane_id}}</td> 
+        <td>{{Airplane_type}}</td> 
+    </tr>
+    {{/each}} 
+</table>
+
+
+<h1>Leg Instance 데이터 삽입</h1> 
+<!--'/'의 주소가 있을 때 출력-->
+<form id="leginst" method="post" > 
+    <div>
+        <label for="Date">Date</label>
+        <input id="Date" name="Date" type="text" required placeholder="YYYY-MM-DD"> 
+    </div>
+    <div>
+        <label for="Airplane_id">Airplane_id</label>
+        <input id="Airplane_id" name="Airplane_id" type="text" required placeholder="Airport id"> 
+    </div>
+    <div>
+        <label for="Leg_number">Leg number</label>
+        <input id="Leg_number" name="Leg_number" type="text" required placeholder="Leg number"> 
+    </div>
+    <div>
+        <label for="FLIGHT_Numbero">FLIGHT_Number</label>
+        <input id="FLIGHT_Number" name="FLIGHT_Number" type="text" required placeholder="FLIGHT_Number"> 
+    </div>
+    <div>
+        <label for="Departure_Airport_code">Departure_Airport_code</label>
+        <input id="Departure_Airport_code" name='Departure_Airport_code' type="text" required placeholder="Departure_Airport_code"> 
+    </div> 
+    <div>
+        <label for="Arrival_Airport_code">Arrival_Airport_code</label>
+        <input id="Arrival_Airport_code" name='Arrival_Airport_code' type="text" required placeholder="Arrival_Airport_code">
+    </div> 
+    <div>
+        <label for="Dep_time">Dep_time</label>
+        <input id="Dep_time" name='Dep_time' type="text" required placeholder="hh:mm:ss">
+    </div>
+    <div>
+        <label for="Arr_time">Arr_time</label>
+        <input id="Arr_time" name='Arr_time' type="text" required placeholder="hh:mm:ss">
+    </div>
+    <div>    
+        <input type="submit" value="삽입">
+    </div> 
+</form>

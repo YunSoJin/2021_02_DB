@@ -1,0 +1,67 @@
+<h1>{{ title1 }}</h1>
+<table> 
+    <tr>
+        <td>Leg_no</td> 
+        <td>FLIGHT_Number</td> 
+        <td>Departure_Airport_code</td>
+        <td>Arrival_Airport_code</td>
+        <td>Departure_time</td>
+        <td>Arrival_time</td>
+    </tr> 
+    {{#each flightleg}} 
+    <tr>
+        <td>{{Leg_no}}</td> 
+        <td>{{FLIGHT_Number}}</td> 
+        <td>{{Departure_Airport_code}}</td>
+        <td>{{Arrival_Airport_code}}</td>
+        <td>{{Departure_time}}</td>
+        <td>{{Arrival_time}}</td> 
+    </tr>
+    {{/each}} 
+</table>
+
+<h1>{{ title2 }}</h1>
+<table> 
+    <tr>
+        <td>Airplane_id</td> 
+        <td>Airplane_type</td> 
+    </tr> 
+    <!--select.js에서 넘겨준 데이터가 있을 때마다 반복 -->
+    {{#each airplane}} 
+    <tr>
+        <td>{{Airplane_id}}</td> 
+        <td>{{Airplane_type}}</td> 
+    </tr>
+    {{/each}} 
+</table>
+
+
+<h1>{{ title }}</h1>
+<table> 
+    <tr>
+        <td>Date</td>
+        <td>Airplane_id</td>
+        <td>Leg_number</td> 
+        <td>FLIGHT_Number</td> 
+        <td>Departure_Airport_code</td>
+        <td>Arrival_Airport_code</td>
+        <td>Dep_time</td>
+        <td>Arr_time</td>
+    </tr> 
+    {{#each leginst}} 
+        <form method="post"> 
+            <tr>
+                <td><input id="Date" name="Date" type="text" placeholder={{Date}}></td> 
+                <td><input id="Airplane_id" name="Airplane_id" type="text" placeholder={{Airplane_id}}></td> 
+                <td><input id="Leg_number" name="Leg_number" type="text" placeholder={{Leg_number}}></td> 
+                <td><input id="FLIGHT_Number" name="FLIGHT_Number" type="text" placeholder={{FLIGHT_Number}}></td> 
+                <td><input id="Departure_Airport_code" name="Departure_Airport_code" type="text" placeholder={{Departure_Airport_code}}></td> 
+                <td><input id="Arrival_Airport_code" name="Arrival_Airport_code" type="text" placeholder={{Arrival_Airport_code}}></td> 
+                <td><input id="Dep_time" name="Dep_time" type="text" placeholder={{Dep_time}}></td> 
+                <td><input id="Arr_time" name="Arr_time" type="text" placeholder={{Arr_time}}></td> 
+                <td><input type="submit" value="수정" formaction="/admin/leginst/update"></td>
+            </tr> 
+        </form>
+    {{/each}} 
+</table>
+

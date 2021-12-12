@@ -1,0 +1,16 @@
+<h1>{{ title }}</h1>
+<table> 
+    <tr>
+        <td>Airport_code</td> 
+        <td>City</td> 
+        <td>Name</td> 
+    </tr> 
+    <!--select.js에서 넘겨준 데이터가 있을 때마다 반복 -->
+    {{#each airport}} 
+    <tr>
+        <td>{{Airport_code}}</td> 
+        <td>{{City}}</td> 
+        <td>{{Name}}</td> 
+    </tr>
+    {{/each}} 
+</table>

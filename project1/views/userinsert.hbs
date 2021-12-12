@@ -1,0 +1,54 @@
+<h1>{{ title }}</h1>
+<table> 
+    <tr>
+        <td>Date</td> 
+        <td>Departure_Airport</td> 
+        <td>Arrival_airport</td> 
+        <td>Dep_time</td> 
+        <td>Arr_time</td> 
+        <td>Fare</td> 
+    </tr> 
+    <!--select.js에서 넘겨준 데이터가 있을 때마다 반복 -->
+    {{#each userres}} 
+    <tr>
+        <td>{{Date}}</td> 
+        <td>{{Departure_Airport}}</td> 
+        <td>{{Arrival_airport}}</td> 
+        <td>{{Dep_time}}</td> 
+        <td>{{Arr_time}}</td> 
+        <td>{{Fare}}</td>
+    </tr>
+    {{/each}} 
+</table>
+
+<h1>예약하기</h1> 
+<!--'/'의 주소가 있을 때 출력-->
+<form id="airport" method="post" > 
+    <div>
+        <label for="Date">Date</label>
+        <input id="Date" name="Date" type="text" required placeholder="Date"> 
+    </div> 
+    <div>
+        <label for="Departure_Airport">Departure_Airport</label>
+        <input id="Departure_Airport" name='Departure_Airport' type="text" required placeholder="Departure_Airport"> 
+    </div> 
+    <div>
+        <label for="Arrival_airport">Arrival_airport</label>
+        <input id="Arrival_airport" name='Arrival_airport' type="text" required placeholder="Arrival_airport">
+    </div> 
+    <div>
+        <label for="Dep_time">Name</label>
+        <input id="Dep_time" name='Dep_time' type="text" required placeholder="Dep_time">
+    </div> 
+    <div>
+        <label for="Arr_time">Name</label>
+        <input id="Arr_time" name='Arr_time' type="text" required placeholder="Arr_time">
+    </div> 
+    <div>
+        <label for="Fare">Name</label>
+        <input id="Fare" name='Fare' type="text" required placeholder="Fare">
+    </div> 
+    <div>    
+        <input type="submit" value="예약">
+    </div> 
+</form>

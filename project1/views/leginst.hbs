@@ -1,0 +1,25 @@
+<h1>{{ title }}</h1>
+<table> 
+    <tr>
+        <td>Date</td>
+        <td>Airplane_id</td>
+        <td>Leg_number</td> 
+        <td>FLIGHT_Number</td> 
+        <td>Departure_Airport_code</td>
+        <td>Arrival_Airport_code</td>
+        <td>Dep_time</td>
+        <td>Arr_time</td>
+    </tr> 
+    {{#each leginst}} 
+    <tr>
+        <td>{{Date}}</td>
+        <td>{{Airplane_id}}</td>
+        <td>{{Leg_number}}</td>
+        <td>{{FLIGHT_Number}}</td> 
+        <td>{{Departure_Airport_code}}</td>
+        <td>{{Arrival_Airport_code}}</td>
+        <td>{{Dep_time}}</td>
+        <td>{{Arr_time}}</td> 
+    </tr>
+    {{/each}} 
+</table>

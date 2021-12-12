@@ -1,0 +1,22 @@
+<h1>{{ title }}</h1>
+<table> 
+    <tr>
+        <td>Leg_no</td> 
+        <td>FLIGHT_Number</td> 
+        <td>Departure_Airport_code</td>
+        <td>Arrival_Airport_code</td>
+        <td>Departure_time</td>
+        <td>Arrival_time</td>
+    </tr> 
+    {{#each flightleg}} 
+    <tr>
+        <td>{{Leg_no}}</td> 
+        <td>{{FLIGHT_Number}}</td> 
+        <td>{{Departure_Airport_code}}</td>
+        <td>{{Arrival_Airport_code}}</td>
+        <td>{{Departure_time}}</td>
+        <td>{{Arrival_time}}</td> 
+    </tr>
+    {{/each}} 
+</table>
+

@@ -1,0 +1,64 @@
+<h1>{{ title1 }}</h1>
+<table> 
+    <tr>
+        <td>Airport_code</td> 
+        <td>City</td> 
+        <td>Name</td> 
+    </tr> 
+    <!--select.js에서 넘겨준 데이터가 있을 때마다 반복 -->
+    {{#each airport}} 
+    <tr>
+        <td>{{Airport_code}}</td> 
+        <td>{{City}}</td> 
+        <td>{{Name}}</td> 
+    </tr>
+    {{/each}} 
+</table>
+
+<h1>{{ title2 }}</h1>
+<table> 
+    <tr>
+        <td>Number</td> 
+        <td>Airline</td> 
+    </tr> 
+    <!--select.js에서 넘겨준 데이터가 있을 때마다 반복 -->
+    {{#each flight}} 
+    <tr>
+        <td>{{Number}}</td> 
+        <td>{{Airline}}</td> 
+    </tr>
+    {{/each}} 
+</table>
+
+
+<h1>Flight Leg 데이터 삽입</h1> 
+<!--'/'의 주소가 있을 때 출력-->
+<form id="flightleg" method="post" > 
+    <div>
+        <label for="Leg_no">Leg number</label>
+        <input id="Leg_no" name="Leg_no" type="text" required placeholder="Leg number"> 
+    </div>
+    <div>
+        <label for="FLIGHT_Numbero">FLIGHT_Number</label>
+        <input id="FLIGHT_Number" name="FLIGHT_Number" type="text" required placeholder="FLIGHT_Number"> 
+    </div>
+    <div>
+        <label for="Departure_Airport_code">Departure_Airport_code</label>
+        <input id="Departure_Airport_code" name='Departure_Airport_code' type="text" required placeholder="Departure_Airport_code"> 
+    </div> 
+    <div>
+        <label for="Arrival_Airport_code">Arrival_Airport_code</label>
+        <input id="Arrival_Airport_code" name='Arrival_Airport_code' type="text" required placeholder="Arrival_Airport_code">
+    </div> 
+    <div>
+        <label for="Departure_time">Departure_time</label>
+        <input id="Departure_time" name='Departure_time' type="text" required placeholder="hh:mm:ss">
+    </div>
+    <div>
+        <label for="Arrival_time">Arrival_time</label>
+        <input id="Arrival_time" name='Arrival_time' type="text" required placeholder="hh:mm:ss">
+    </div>
+    <div>    
+        <input type="submit" value="삽입">
+    </div> 
+</form>

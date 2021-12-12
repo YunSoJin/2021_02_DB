@@ -1,0 +1,14 @@
+<h1>{{ title }}</h1>
+<table> 
+    <tr>
+        <td>Airplane_id</td> 
+        <td>Airplane_type</td> 
+    </tr> 
+    <!--select.js에서 넘겨준 데이터가 있을 때마다 반복 -->
+    {{#each airplane}} 
+    <tr>
+        <td>{{Airplane_id}}</td> 
+        <td>{{Airplane_type}}</td> 
+    </tr>
+    {{/each}} 
+</table>
